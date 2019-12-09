@@ -1,11 +1,12 @@
 package be.digitcom.notekeeper
 
-class DataManager {
+object DataManager {
     val courses = HashMap<String, CourseInfo>()
     val notes = ArrayList<NoteInfo>()
 
     init {
         initializeCourse()
+        initializeNotes()
     }
 
     private fun initializeCourse() {
@@ -20,5 +21,9 @@ class DataManager {
 
         course = CourseInfo(courseId = "java_core", title = "Java Fundamentals: The Core Platform")
         courses.set(course.courseId, course)
+    }
+
+    private fun initializeNotes() {
+
     }
 }
